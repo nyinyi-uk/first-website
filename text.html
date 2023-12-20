@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Practice</title>
+    <style>
+      /*CSS Specificity*/
+      /*if we have multiple lines setting the same property, there is a priority the browser follows. To dertermine which one has more priority, we need to look at the style name.
+      'p' is an element name selector, and '.video-title' is a class name selector which targets a specific class.
+      therefore, a selector with more specific has higher priority.
+      */
+      
+      
+      /*the below 'p' affects all paragraphs (p).*/
+        p{
+          font-family: Arial;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      
+        /*the below '.video-title' affects only the paragraph with class name 'video-title'.*/
+        .video-title{
+          font-family: Times New Roman;/*according to CSS Specificity, this font has higher priority than 'Arial' as defined in 'p'.*/
+          font-weight: bold;
+          text-align: center;
+          width: 300px;
+          line-height: 24px;  
+        }
+      
+        .span-text{
+          color:red;
+          /*since html ignores spaces, we can add spaces by using 'margin-left' or 'margin-right' function to add spaces. */
+          margin-left: 10px;
+        }
+      
+        .span-text:hover{
+          text-decoration: underline;
+        }
+      </style>
+  </head>
+
+  <body>
+    <!--below paragraph is affected by both 'p' style and '.video-title' style. -->
+    <p class="video-title">
+      Talking Tech and AI with Google CEO Sundar Pichai!
+    </p>
+
+    <p>
+      3.4M &#183; 6 months ago
+    </p>
+
+    <!--instead of using symbols (e.g. <, >, etc.) we should use 'html entity' which will give you the same symbol wihtout writing that symbol because the actual symbol can confuse the browser and cause issues. -->
+    <!--in the example below, '>' is represented by '&#62;'-->
+    <p>
+      Shop early for the best selection. Shop now &#62;
+    </p>
+
+    <!--'strong' and 'u' are 'text elements' and they come with their own style. However, we can use 'span' which has no built-in style. we can give it a class name attribute and can create a style we want.-->
+    <p>
+      Shop early for the <strong>best</strong> selection. <u>Shop</u> now to <span class="span-text">grab a bargain</span> before Christmas&#33; &#62;
+    </p>
+  </body>
+</html>
+
+
+

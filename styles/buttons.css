@@ -1,0 +1,45 @@
+/* 'button' is called CSS selector >> which element we want to style*/
+    /* in CSS, we start with dot (.) to style a class. if we style an element, we don't need to start with a dot (.).*/
+    .subscribe-button{
+      /*lefthand side is called 'property' and righthand side is called 'value'. */
+      background-color: red;
+      color: white;
+      border: none;
+      height: 35px;
+      width: 105px;
+      border-radius: 2px;
+    }
+
+    /*':hoave' is a pseudo class. it adds certain styles to a class in certain situations. */
+    .subscribe-button:hover{
+      background-color: green;
+      opacity: 0.50;
+    }
+
+    .subscribe-button:active{
+      background-color: blue;
+    }
+
+    .join-button{
+      color: blue;
+      border-color: red;
+      background-color: white;
+      transition: background-color 1s,
+        color 1s;
+    }
+
+    .join-button:hover{
+      background-color: blue;
+    }
+
+    .tweet-button{
+      background-color: blue;
+      border-color: blue;
+      color: white;
+      border-radius: 50px;
+      transition: box-shadow 1s;
+    }
+
+    .tweet-button:hover{
+      box-shadow: 5px 5px 10px red;
+    }
